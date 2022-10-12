@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import andysm from '../images/andjames.png'
 import scott from '../images/s_ion.svg'
 import boss from '../images/boss.svg'
 import setup from '../images/setup.svg'
+import kemper from '../images/kemper_demo.svg'
 
 const HomeFirstAd = () => {
   return (
@@ -17,17 +17,17 @@ const HomeFirstAd = () => {
                     <img src={boss} alt="asdf" />
                 </div>
                 <div className="ad-two">
-                    <img src={scott} alt="asdf" />
+                    <img src={kemper} alt="asdf" />
                 </div>
             </div>
           
           <div className="container">
                 <div className="ad-three">
-                    <img src={setup} alt="asdf" />
+                    <img src={scott} alt="asdf" />
                 </div>
 
                 <div className="ad-four">
-                    <img src={andysm} alt="asdf" />
+                    <img src={setup} alt="asdf" />
                 </div>
             </div>
         </div>
