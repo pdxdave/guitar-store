@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const Amps = () => {
   return (
-    <div>Amps</div>
+    <div className="page-setting">Amps</div>
   )
 }
 

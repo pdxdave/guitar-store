@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const Pedals = () => {
   return (
-    <div>Pedals</div>
+    <div className="page-setting">Pedals</div>
   )
 }
 

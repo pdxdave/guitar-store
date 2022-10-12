@@ -1,9 +1,20 @@
-import React from 'react'
+import styled from "styled-components"
 
-const Hero = () => {
+const Hero = ({children, hero}) => {
   return (
-    <div>Hero</div>
+    <Wrapper className={hero}>
+        {children}
+    </Wrapper>
   )
 }
 
+const Wrapper = styled.div`
+  width: 95vw;
+  max-width: 1400px;  
+  margin: 0 auto;
+
+  @media (max-width: 960px){
+    width: 100%;
+  }
+`
 export default Hero

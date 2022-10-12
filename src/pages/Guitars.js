@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const Guitars = () => {
   return (
-    <div>Guitars</div>
+    <div className="page-setting">Guitars</div>
   )
 }
 
