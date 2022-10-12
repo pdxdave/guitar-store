@@ -7,6 +7,7 @@ import Hero from './Hero';
 import Banner from './Banner';
 import SubNav from './SubNav';
 import HomeFirstAd from './HomeFirstAd';
+import MarshallSlider from './MarshallSlider';
 
 
 export {
@@ -18,5 +19,6 @@ export {
     Hero,
     Banner,
     SubNav,
-    HomeFirstAd
+    HomeFirstAd,
+    MarshallSlider
 }
