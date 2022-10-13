@@ -29,11 +29,7 @@ padding-top: 0px;
         .lessons_md {
             display: none;
         }
-        
     }
-    
-    
-
 
 `
 export default Lessons

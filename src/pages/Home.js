@@ -1,22 +1,13 @@
-import {Hero} from '../components';
+
 import styled from 'styled-components';
-import {HomeFirstAd, MarshallSlider, Lessons} from '../components';
+import {HomeFirstAd, MarshallSlider, Lessons, Hero} from '../components';
 
 
 
 const Home = () => {
     return (
       <Wrapper >
-        <Hero hero="homeHero">
-          <div  className='banner' >
-            <div></div>
-            <div className='banner-content'>
-               <h1>Ibanez Guitars</h1>
-               <h2>Fall Sale Event</h2>
-               <h4>Thru Dec. 21</h4>
-            </div>
-          </div>
-        </Hero>
+        <Hero />
         <HomeFirstAd />
         <MarshallSlider />
         <Lessons />

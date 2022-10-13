@@ -114,10 +114,10 @@ p {
   min-height: calc(100vh - (5em + 4rem));
 }
 
-.homeHero {
+/* .homeHero {
 	min-height: calc(60vh + 9em);
-	background: url('./images/collen2.jpg');
+	background: url('./images/vivian.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
+} */

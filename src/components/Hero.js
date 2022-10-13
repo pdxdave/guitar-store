@@ -1,20 +1,42 @@
-import styled from "styled-components"
+import styled from 'styled-components'
+import collen3 from '../images/collen3.jpg'
 
-const Hero = ({children, hero}) => {
+const Hero = () => {
   return (
-    <Wrapper className={hero}>
-        {children}
+    <Wrapper >
+     <img src={collen3} alt="" />
+     <div className='hero-content'>
+        sadfasdf
+     </div>
     </Wrapper>
-  )
+  ) 
 }
 
-const Wrapper = styled.div`
-  width: 95vw;
-  max-width: 1400px;  
-  margin: 0 auto;
+const Wrapper = styled.section`
+position: relative;
+    width: 95vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* padding: 2rem 0; */
 
-  @media (max-width: 960px){
+   img {
+        width: 100%;
+        height: auto;
+   }
+
+   .hero-content {
+        position: absolute;
+        top: 20%;
+        right: 60%;
+   }
+   h1 {
+    color: white;
+   }
+
+
+@media (max-width: 900px){
     width: 100%;
-  }
+}
 `
+
 export default Hero
