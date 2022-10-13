@@ -6,7 +6,7 @@ const Hero = () => {
     <Wrapper >
      <img src={collen3} alt="" />
      <div className='hero-content'>
-        sadfasdf
+    
      </div>
     </Wrapper>
   ) 
@@ -24,11 +24,6 @@ position: relative;
         height: auto;
    }
 
-   .hero-content {
-        position: absolute;
-        top: 20%;
-        right: 60%;
-   }
    h1 {
     color: white;
    }
