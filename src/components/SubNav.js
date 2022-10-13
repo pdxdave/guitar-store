@@ -18,7 +18,7 @@ const Wrapper = styled.section`
     width: 100%;
     height: 2.5em;
     display: grid;
-    /* z-index: 10; */
+    z-index: 999;
 
     .store-location {
         width: 90vw;

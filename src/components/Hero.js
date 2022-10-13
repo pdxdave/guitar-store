@@ -16,8 +16,6 @@ position: relative;
     width: 95vw;
     max-width: 1400px;
     margin: 0 auto;
-    
-    z-index: -1; /* w/o it scrolls over nav */
 
    img {
         width: 100%;

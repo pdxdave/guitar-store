@@ -47,6 +47,7 @@ const ProductSlider = () => {
 
 const Wrapper = styled.section`
 
+
 padding-top: 0px;
 
 h3 {
