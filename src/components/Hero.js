@@ -1,13 +1,15 @@
 import styled from 'styled-components'
-import collen3 from '../images/collen3.jpg'
+import collen_hero_lrg from '../images/collen_hero_lrg.jpg'
+import collen_hero_sm from '../images/collen_hero_sm.jpg'
 
 const Hero = () => {
   return (
     <Wrapper >
-     <img src={collen3} alt="" />
-     <div className='hero-content'>
+     <img className='hero_lrg' src={collen_hero_lrg} alt="phil collen" />
+     <img className='hero_sm' src={collen_hero_sm} alt="phil collen mobile" />
+     {/* <div className='hero-content'>
     
-     </div>
+     </div> */}
     </Wrapper>
   ) 
 }
@@ -27,10 +29,21 @@ position: relative;
    h1 {
     color: white;
    }
-
+ .hero_lrg {
+    display: none;
+ }
 
 @media (max-width: 900px){
     width: 100%;
+    
+}
+@media (min-width: 900px){
+    .hero_sm {
+        display: none;
+    }
+    .hero_lrg {
+        display: grid;
+    }
 }
 `
 
