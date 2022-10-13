@@ -95,7 +95,7 @@ const Wrapper = styled.div`
         width: 100%;
         background: #fff;
         transform: translate(-100%);
-        transition: 0.3s ease-in-out;
+        transition: all 5s ease-in-out;
     }
     .show-mobile {
         transform: translate(0);

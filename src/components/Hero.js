@@ -16,7 +16,8 @@ position: relative;
     width: 95vw;
     max-width: 1400px;
     margin: 0 auto;
-    /* padding: 2rem 0; */
+    
+    z-index: -1; /* did the same with marshalls. check notes  */
 
    img {
         width: 100%;

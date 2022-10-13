@@ -74,7 +74,7 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1;
   background: #fff;
   /* border-bottom: 1px solid red;  */
 

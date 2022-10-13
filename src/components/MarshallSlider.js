@@ -80,6 +80,7 @@ p {
     cursor: pointer;
     opacity: .4;
     outline: none;
+    z-index: -1; /* note index w/o impacts rectracting mobile slider*/
 }
 
  .slider-container {
@@ -87,6 +88,7 @@ p {
     display: flex;
     align-items: center;
     scroll-snap-type: x mandatory;
+    z-index: -1; /* note index */
  }
 
 #slider {

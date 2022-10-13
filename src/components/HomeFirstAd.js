@@ -38,7 +38,6 @@ const HomeFirstAd = () => {
 
 const Wrapper = styled.section`
 
-    
     img {
         width: 100%;
         height: auto;
@@ -50,8 +49,6 @@ const Wrapper = styled.section`
    }
    
    @media (min-width: 900px){
-    
-       
         .ad-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
