@@ -8,6 +8,7 @@ import Banner from './Banner';
 import SubNav from './SubNav';
 import HomeFirstAd from './HomeFirstAd';
 import MarshallSlider from './MarshallSlider';
+import Lessons from './Lessons'
 
 
 export {
@@ -20,5 +21,6 @@ export {
     Banner,
     SubNav,
     HomeFirstAd,
-    MarshallSlider
+    MarshallSlider,
+    Lessons
 }
