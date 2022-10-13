@@ -7,9 +7,6 @@ const Hero = () => {
     <Wrapper >
      <img className='hero_lrg' src={collen_hero_lrg} alt="phil collen" />
      <img className='hero_sm' src={collen_hero_sm} alt="phil collen mobile" />
-     {/* <div className='hero-content'>
-    
-     </div> */}
     </Wrapper>
   ) 
 }
