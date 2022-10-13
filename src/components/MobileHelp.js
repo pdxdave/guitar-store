@@ -71,7 +71,7 @@ const Wrapper = styled.div`
         position: fixed;
         right: 0;
         bottom: 0;
-        z-index: 500;
+        z-index: 999;
 
       .btn {
         font-size: 3.5rem;
