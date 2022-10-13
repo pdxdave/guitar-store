@@ -96,10 +96,10 @@ const Wrapper = styled.div`
         background: #fff;
         transform: translate(-100%);
         transition: all .3s ease-in-out;
+        z-index: 999;
     }
     .show-mobile {
         transform: translate(0);
-        z-index: 999;
     }
 
     .close-btn {

@@ -17,7 +17,7 @@ position: relative;
     max-width: 1400px;
     margin: 0 auto;
     
-    z-index: -1; /* did the same with marshalls. check notes  */
+    z-index: -1; /* w/o it scrolls over nav */
 
    img {
         width: 100%;

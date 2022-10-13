@@ -7,9 +7,9 @@ import {HomeFirstAd, MarshallSlider, Lessons, Hero} from '../components';
 const Home = () => {
     return (
       <Wrapper >
-        <Hero /> {/* */}
+        <Hero />
         <HomeFirstAd />
-        <MarshallSlider /> {/* */}
+        <MarshallSlider />
         <Lessons />
       </Wrapper>
     )
