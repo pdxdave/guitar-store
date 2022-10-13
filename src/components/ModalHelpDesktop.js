@@ -53,7 +53,7 @@ const Wrapper = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 900 !important;
+  z-index: 9999 !important;
 }
 .modal-container {
   position: absolute;
