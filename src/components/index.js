@@ -8,7 +8,9 @@ import Banner from './Banner';
 import SubNav from './SubNav';
 import HomeFirstAd from './HomeFirstAd';
 import MarshallSlider from './MarshallSlider';
-import Lessons from './Lessons'
+import Lessons from './Lessons';
+import EmailList from './EmailList';
+import Footer from './Footer'
 
 
 export {
@@ -22,5 +24,7 @@ export {
     SubNav,
     HomeFirstAd,
     MarshallSlider,
-    Lessons
+    Lessons,
+    EmailList,
+    Footer
 }

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import lessons_lrg from '../images/lessons_lrg.jpg';
-import lessons_sm from '../images/lessons_sm.jpg';
+import lessons1_lrg from '../images/lessons1_lrg.jpg';
+import lessons1_sm from '../images/lessons1_sm.jpg';
 
 const Lessons = () => {
   return (
     <Wrapper className='page-setting'>
        
-        <img className='lessons_lrg' src={lessons_lrg} alt="woman taking guitar lesson" />
-        <img className='lessons_sm' src={lessons_sm} alt="woman taking guitar lesson" />
+        <img className='lessons_lrg' src={lessons1_lrg} alt="woman taking guitar lesson" />
+        <img className='lessons_sm' src={lessons1_sm} alt="woman taking guitar lesson" />
         
     </Wrapper>
   )
@@ -19,7 +19,7 @@ const Wrapper = styled.section`
     width: 95vw;
     max-width: 1400px;
     margin: 0 auto;
-    
+
     img {
         width: 100%;
         height: auto;

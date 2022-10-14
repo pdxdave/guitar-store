@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-import {HomeFirstAd, MarshallSlider, Lessons, Hero} from '../components';
+import {HomeFirstAd, MarshallSlider, Lessons, Hero, EmailList, Footer} from '../components';
 
 
 
@@ -11,6 +11,8 @@ const Home = () => {
         <HomeFirstAd />
         <MarshallSlider />
         <Lessons />
+        <EmailList />
+        <Footer />
       </Wrapper>
     )
   }
