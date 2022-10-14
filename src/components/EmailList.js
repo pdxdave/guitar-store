@@ -20,7 +20,7 @@ const Wrapper = styled.section`
     
         max-width: 95vw;
         width: 800px;
-        margin: 0 auto;
+        margin: 3em auto 5em;
         
         input {
             width: 100%;
