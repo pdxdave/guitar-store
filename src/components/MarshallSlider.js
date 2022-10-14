@@ -8,11 +8,11 @@ const ProductSlider = () => {
 
     const moveLeft = () => {
         let slider = document.getElementById('slider')
-        slider.scrollLeft = slider.scrollLeft - 275;
+        slider.scrollLeft = slider.scrollLeft - 280; // was 275px
     }
     const moveRight = () => {
         let slider = document.getElementById('slider')
-        slider.scrollLeft = slider.scrollLeft + 275;
+        slider.scrollLeft = slider.scrollLeft + 280; // was 275px
     }
 
 
@@ -105,7 +105,7 @@ p {
 
 .card {
     position: relative;
-    width: 265px;
+    width: 270px; // was 265px
     height: 300px;
     display: inline-block;
     margin-left: 5px;
