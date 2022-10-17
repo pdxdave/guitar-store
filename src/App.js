@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {Home, Pedals, Amps, Guitars} from './pages'
-import {Navbar, MobileNav, MobileHelp} from './components'
+import {Navbar, MobileNav, MobileHelp, Footer} from './components'
 function App() {
   return (
     <BrowserRouter className="App">
@@ -13,6 +13,7 @@ function App() {
         <Route exact path="/pedals" element={< Pedals/>} />
       </Routes>
       <MobileHelp />
+      <Footer />
     </BrowserRouter>
   );
 }

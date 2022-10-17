@@ -1,0 +1,67 @@
+import styled from 'styled-components';
+import { formatPrice } from '../utils/helper';
+import Stars from './Stars'
+
+const Product = ({name, url, price, stars, reviews}) => {
+    
+  let monthly = price / 6;
+  return (
+    <Wrapper>
+        <img src={url} alt={name} />
+        <p className='name'>{name}</p>
+        <p className='price'>{formatPrice(price)}</p>
+            
+        <div className='monthly_payment'>
+           <p>Or <span className='monthly_price'>{formatPrice(monthly)}</span>/<span>month</span> for</p> 
+           <p><span>6 mo.</span> with <span>Easy Pay</span></p>
+        </div>
+        
+        <Stars stars={stars} reviews={reviews} />
+    </Wrapper>
+  )
+}
+
+const Wrapper = styled.article`
+    width: 220px;
+    max-width: 100%;
+
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+    padding: .5em;
+
+img{
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    padding: 0px;
+    margin: 0px;
+  }
+  .name {
+    font-size: .875rem;
+    text-align: center;
+    margin-bottom: .25em;
+  }
+  .price {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: red;
+    margin-bottom: .5em;
+  }
+  .monthly_payment {
+    font-size: .75rem;
+    text-align: center;
+    p {
+        margin-bottom: 0;
+    }
+    span {
+        font-weight: 600;
+    }
+  }
+  .monthly_price {
+    color: red;
+  }
+  .reviews {
+    text-align: center;
+  }
+`
+export default Product
