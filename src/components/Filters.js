@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_guitar_context';
 import Sort from './Sort'
-import {formatPrice, getUniqueValues} from '../utils/helper'
+import {getUniqueValues} from '../utils/helper'
 
 const Filters = () => {
   const {
     filters: {
-      min_price,
-      max_price,
-      price,
+      // min_price,
+      // max_price,
+      // price,
       brand,
     },
     updateFilters,
-    clear_filters,
+    // clear_filters,
     all_products
   } = useFilterContext()
 
