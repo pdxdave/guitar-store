@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 import { GuitarList, Filters } from '../components'
-// import logo from '../images/tfg.png'
+import logo from '../images/tfg.png'
 
 const Guitars = () => {
   return (
     <main>
-      <div className="guitar_hero">
-        <p>asdfasdfasdf</p>
-      </div>
+      
       
       <Wrapper className='page-setting'>
+        <img src={logo} alt="fender guitar" />
         <div className="properties">
           <Filters />
             <div>
@@ -22,6 +21,7 @@ const Guitars = () => {
 }
 
 const Wrapper = styled.div`
+
   .properties {
     display: grid;
     gap: 3rem 1.5rem;
@@ -29,7 +29,12 @@ const Wrapper = styled.div`
   }
   .guitar_hero {
     text-align: center;
-  
+    width: 1440px;
+    max-width: 100%; 
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
   
 
