@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { GuitarList, Filters } from '../components'
-import logo from '../images/guitar_hero_banner.png'
+import guitar_lrg from '../images/guitar_hero_banner.png'
+import guitar_sm from '../images/guitar_hero_banner_sm.png'
 
 const Guitars = () => {
   return (
     <main>
       
-      
       <Wrapper className='page-setting'>
-        <img src={logo} alt="fender guitar" />
+        <img className='guitar_lrg' src={guitar_lrg} alt="guitar ad" />
+        <img className='guitar_sm' src={guitar_sm} alt="guitar ad mobile" />
         <div className="properties">
           <Filters />
             <div>
@@ -37,13 +38,24 @@ const Wrapper = styled.div`
     height: auto;
   }
   
-
+  .guitar_lrg {
+    display: none;
+ }
 
   @media (min-width: 768px){
     .properties {
       grid-template-columns: 200px 1fr;
     }
   }
+
+
+@media (min-width: 900px){
+    .guitar_sm {
+        display: none;
+    }
+    .guitar_lrg {
+        display: grid;
+    }
 
 
 `
