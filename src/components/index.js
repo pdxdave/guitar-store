@@ -16,7 +16,8 @@ import Filters from './Filters';
 import GuitarList from './GuitarList';
 import PedalList from './PedalList';
 import Product from './Product';
-import Stars from './Stars'
+import Stars from './Stars';
+import Sort from './Sort';
 
 export {
     Navbar,
@@ -37,5 +38,6 @@ export {
     GuitarList,
     PedalList,
     Product,
-    Stars
+    Stars,
+    Sort
 }

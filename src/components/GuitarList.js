@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { useProductsContext } from "../context/product_context"
+import { useFilterContext } from '../context/filter_guitar_context'
 import Product from './Product'
 
 const GuitarList = () => {
-  const {guitar_products: guitars} = useProductsContext()
+  const {filtered_products: guitars} = useFilterContext()
 
   return (
     <Wrapper>
