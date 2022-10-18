@@ -7,7 +7,7 @@ import {
     GET_PRODUCTS_ERROR
 } from '../actions'
 
-// import reducer from '../reducers/product_reducer'
+import reducer from '../reducers/product_reducer'
 
 const initialState = {
     products_loading: false,
@@ -18,7 +18,7 @@ const initialState = {
     pedal_products: []
 }
  
-let url = 'http://localhost:8888/api/products'
+// let url = 'http://localhost:8888/api/products'
 
 const ProductsContext = React.createContext()
 
