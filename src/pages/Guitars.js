@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { GuitarList, Filters } from '../components'
-import logo from '../images/tfg.png'
+import logo from '../images/guitar_hero_banner.png'
 
 const Guitars = () => {
   return (
