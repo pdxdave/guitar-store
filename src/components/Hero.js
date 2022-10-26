@@ -12,7 +12,6 @@ const Hero = () => {
 }
 
 const Wrapper = styled.section`
-    /* position: relative; */
     width: 95vw;
     max-width: 1400px;
     margin: 0 auto;

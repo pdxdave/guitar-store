@@ -1,12 +1,13 @@
 import React, {useEffect, useContext, useReducer} from 'react';
 import reducer from '../reducers/filter_reducer';
 
+
 import {
    LOAD_PRODUCTS,
    UPDATE_SORT,
    SORT_PRODUCTS,
    UPDATE_FILTERS,
-   FILTER_PRODUCTS
+   FILTER_PRODUCTS,
 } from '../actions'
 
 import { useProductsContext } from './product_context';
@@ -26,19 +27,19 @@ const initialState = {
 const FilterContext = React.createContext()
 
 export const FilterProvider = ({children}) => {
-    const {guitar_products} = useProductsContext();
+    const {products_line} = useProductsContext();
     const [state, dispatch] = useReducer(reducer, initialState)
 
     // INITIAL PRODUCTS LOADING
     useEffect(() => {
-        dispatch({ type: LOAD_PRODUCTS, payload: guitar_products})
-    }, [guitar_products])
+        dispatch({ type: LOAD_PRODUCTS, payload: products_line})
+    }, [products_line])
 
     // when product or state changes
     useEffect(() => {
         dispatch({ type: FILTER_PRODUCTS}) // second
         dispatch({ type: SORT_PRODUCTS}) // first
-    }, [guitar_products, state.sort, state.filters])
+    }, [products_line, state.sort, state.filters])
 
 
     // SORT BY PRICE

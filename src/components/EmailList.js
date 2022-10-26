@@ -28,8 +28,6 @@ const Wrapper = styled.section`
             padding: .25em 0;
             text-indent: .25em;
             margin-bottom: .5em;
-            
-            
         }
         label {
             margin-bottom: 1em;

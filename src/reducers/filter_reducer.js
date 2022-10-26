@@ -3,7 +3,7 @@ import {
     UPDATE_SORT,
     SORT_PRODUCTS,
     UPDATE_FILTERS,
-    FILTER_PRODUCTS
+    FILTER_PRODUCTS,
 } from '../actions'
 
 const filter_reducer = (state, action) => {
@@ -18,7 +18,7 @@ const filter_reducer = (state, action) => {
             ...state,
             all_products: [...action.payload],
             filtered_products: [...action.payload],
-            filters: {...state.filters, max_price: maxPrice, price: maxPrice}
+            filters: {...state.filters, max_price: maxPrice, price: maxPrice, brand: 'all'}
         }
     }
 

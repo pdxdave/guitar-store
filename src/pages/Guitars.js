@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GuitarList, Filters } from '../components'
+import { ProductList, Filters } from '../components'
 import guitar_lrg from '../images/guitar_hero_banner.png'
 import guitar_sm from '../images/guitar_hero_banner_sm.png'
 
@@ -13,7 +13,7 @@ const Guitars = () => {
         <div className="properties">
           <Filters />
             <div>
-               <GuitarList />
+               <ProductList />
             </div>
         </div>
       </Wrapper>
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     .guitar_lrg {
         display: grid;
     }
-
+  }
 
 `
 

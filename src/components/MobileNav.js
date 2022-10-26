@@ -5,9 +5,15 @@ import logo from '../images/logo.svg'
 import styled from 'styled-components';
 import { useMobileContext } from '../context/nav_context';
 import CartButtons from './CartButtons';
+import { useProductsContext } from '../context/product_context';
 
 const MobileNav = () => {
     const {isMobileOpen, closeMobile} = useMobileContext()
+
+    const {
+      pathUpdate
+    } = useProductsContext()
+    
   return (
     <Wrapper>
         <div className={`${isMobileOpen ? 'mobile show-mobile' : 'mobile'}`}>
@@ -27,8 +33,10 @@ const MobileNav = () => {
             </div>
             <ul className="links">
                 {navLinks.map(({id, text, url}) => {
-                    return <li key={id}>
-                        <Link to={url} onClick={closeMobile}>{text}</Link>
+                    return <li key={id} >
+                        <Link  to={url}  onClick={closeMobile} >
+                            <button type="button" name={text}  onClick={pathUpdate} >{text}</button>
+                        </Link>
                     </li>
                 })}
             </ul>
@@ -42,6 +50,25 @@ const MobileNav = () => {
 }
 
 const Wrapper = styled.div`
+
+button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  padding: .15em;
+  margin: .5em 0 .5em 1em;
+
+
+  /* display: block; */
+    text-align: left;
+    /* font-size: 1.2rem; */
+    color: gray;
+    /* text-transform: capitalize; */
+    /* padding: 1rem 2.2rem; */
+  background: transparent;
+  border: none;
+
+}
 
 .test {
     margin-left: 35%;
@@ -79,12 +106,12 @@ const Wrapper = styled.div`
     }
 
     .links a {
-    display: block;
+    /* display: block;
     text-align: left;
     font-size: 1.2rem;
     color: gray;
     text-transform: capitalize;
-    padding: 1rem 2.2rem;
+    padding: 1rem 2.2rem; */
   }
 
     .mobile {
@@ -113,7 +140,7 @@ const Wrapper = styled.div`
     .mobile {
       display: none;
     }
-
+  }
 `
 
 export default MobileNav

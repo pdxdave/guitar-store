@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useFilterContext } from '../context/filter_guitar_context';
+import { useFilterContext } from '../context/filter_context';
 import Sort from './Sort'
 import {getUniqueValues} from '../utils/helper'
 
@@ -12,7 +12,6 @@ const Filters = () => {
       brand,
     },
     updateFilters,
-    // clear_filters,
     all_products
   } = useFilterContext()
 
@@ -30,6 +29,7 @@ const Filters = () => {
                 <div className='brands'>
                   {brands.map((br, index) => {
                     return <button
+                        roll="button"
                         key={index}
                         onClick={updateFilters}
                         name="brand"
@@ -67,7 +67,6 @@ const Wrapper = styled.section`
     font-size: 1rem;
     color: var( --clr-grey-600);
     background: transparent;
-    text-transform: capitalize;
     cursor: pointer;
     
   }
@@ -80,5 +79,6 @@ const Wrapper = styled.section`
       position: sticky;
       top: 10em;
   }
+}
 `
 export default Filters

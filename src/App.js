@@ -1,7 +1,9 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {Home, Pedals, Amps, Guitars} from './pages'
 import {Navbar, MobileNav, MobileHelp, Footer} from './components'
+
 function App() {
+  
   return (
     <BrowserRouter className="App">
       <Navbar />

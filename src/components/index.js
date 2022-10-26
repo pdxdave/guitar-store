@@ -11,13 +11,11 @@ import MarshallSlider from './MarshallSlider';
 import Lessons from './Lessons';
 import EmailList from './EmailList';
 import Footer from './Footer';
-import AmpList from './AmpList';
 import Filters from './Filters';
-import GuitarList from './GuitarList';
-import PedalList from './PedalList';
 import Product from './Product';
 import Stars from './Stars';
 import Sort from './Sort';
+import ProductList from './ProductList'
 
 export {
     Navbar,
@@ -33,11 +31,9 @@ export {
     Lessons,
     EmailList,
     Footer,
-    AmpList,
     Filters,
-    GuitarList,
-    PedalList,
     Product,
     Stars,
-    Sort
+    Sort,
+    ProductList
 }

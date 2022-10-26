@@ -5,10 +5,8 @@ import lessons1_sm from '../images/lessons1_sm.jpg';
 const Lessons = () => {
   return (
     <Wrapper className='page-setting'>
-       
         <img className='lessons_lrg' src={lessons1_lrg} alt="woman taking guitar lesson" />
         <img className='lessons_sm' src={lessons1_sm} alt="woman taking guitar lesson" />
-        
     </Wrapper>
   )
 }

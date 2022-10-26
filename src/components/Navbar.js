@@ -10,10 +10,18 @@ import {useState} from 'react';
 import { useMobileContext } from '../context/nav_context';
 import SubNav from './SubNav';
 
+import { useProductsContext } from '../context/product_context';
+
+
 
 const Navbar = () => {
     const [openModal, setOpenModal] = useState(false)
     const {openMobile} = useMobileContext()
+
+    const {
+      pathUpdate
+    } = useProductsContext()
+    
   return (
      <>
     {openModal && <ModalHelpDesktop closeModal={setOpenModal}/>}
@@ -38,7 +46,12 @@ const Navbar = () => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <Link to={url}>{text}</Link>
+                  <Link 
+                        to={url}  
+                        onClick={pathUpdate} 
+                        name={text}>
+                          {text}
+                    </Link>
                 </li>
               );
             })}

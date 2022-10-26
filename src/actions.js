@@ -9,3 +9,9 @@ export const SORT_PRODUCTS = 'SORT_PRODUCTS'
 export const UPDATE_SORT = 'UPDATE_SORT'
 export const FILTER_PRODUCTS = 'FILTER_PRODUCTS'
 export const UPDATE_FILTERS = 'UPDATE_FILTERS'
+
+export const PATH_UPDATE = 'PATH_UPDATE'
+export const CLEAR_FILTERS = 'CLEAR_FILTERS'
+
+
+export const PATH_TEST = 'PATH_TEST'

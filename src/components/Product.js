@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { formatPrice } from '../utils/helper';
 import Stars from './Stars'
 
+
 const Product = ({name, url, price, stars, reviews}) => {
-    
   let monthly = price / 6;
+
   return (
     <Wrapper>
         <img src={url} alt={name} />

@@ -1,10 +1,13 @@
 import {
     GET_PRODUCTS_BEGIN,
     GET_PRODUCTS_SUCCESS,
-    GET_PRODUCTS_ERROR
+    GET_PRODUCTS_ERROR,
+    PATH_UPDATE
+
 } from '../actions'
 
 const products_reducer = (state, action) => {
+    
 
     if(action.type === GET_PRODUCTS_BEGIN){
         return {
@@ -13,16 +16,12 @@ const products_reducer = (state, action) => {
         }
     }
     if(action.type === GET_PRODUCTS_SUCCESS){
-        const guitar_products = action.payload.filter((product) => product.type === 'guitar')
-        const amp_products = action.payload.filter((product) => product.type === 'amp')
-        const pedal_products = action.payload.filter((product) => product.type === 'pedal')
+        const products_line = action.payload.filter((product) => product.type === state.products_path)
         return {
             ...state,
             products_loading: false,
             products: action.payload,
-            guitar_products,
-            amp_products,
-            pedal_products
+            products_line,
         }
     }
     if(action.type === GET_PRODUCTS_ERROR){
@@ -30,6 +29,12 @@ const products_reducer = (state, action) => {
             ...state,
             products_loading: false,
             products_error: true
+        }
+    }
+    if(action.type === PATH_UPDATE){
+        return {
+            ...state, 
+            products_path: action.payload
         }
     }
 

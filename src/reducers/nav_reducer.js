@@ -1,4 +1,4 @@
-import {MOBILE_OPEN, MOBILE_CLOSE} from '../actions'
+import {MOBILE_OPEN, MOBILE_CLOSE, PATH_TEST} from '../actions'
 
 
 const mobile_reducer = (state, action) => {
@@ -13,6 +13,13 @@ const mobile_reducer = (state, action) => {
         return {
             ...state,
             isMobileOpen: false
+        }
+    }
+
+    if(action.type === PATH_TEST){
+        return {
+            ...state, 
+            pathTest: action.payload
         }
     }
 

@@ -9,9 +9,6 @@ const HomeFirstAd = () => {
     <Wrapper className="page-setting">
 
         <div className="ad-container">
-            
-
-
             <div className="container">
                 <div className="ad-one">
                     <img src={boss} alt="asdf" />
