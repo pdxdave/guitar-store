@@ -1,5 +1,5 @@
 import React, {useReducer, useContext, useEffect} from 'react';
-// import { products_url as url } from '../utils/misc';
+import { products_url as url } from '../utils/misc';
 import axios from 'axios'
 import {
     GET_PRODUCTS_BEGIN,
@@ -20,7 +20,7 @@ const initialState = {
 }
 
  
-let url = 'http://localhost:8888/api/products'
+// let url = 'http://localhost:8888/api/products'
 
 const ProductsContext = React.createContext()
 
