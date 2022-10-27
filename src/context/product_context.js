@@ -5,7 +5,12 @@ import {
     GET_PRODUCTS_BEGIN,
     GET_PRODUCTS_SUCCESS,
     GET_PRODUCTS_ERROR,
-    PATH_UPDATE
+    PATH_UPDATE,
+
+    GET_SINGLE_PRODUCT_BEGIN,
+    GET_SINGLE_PRODUCT_SUCCESS,
+    GET_SINGLE_PRODUCT_ERROR
+
 } from '../actions'
 
 import reducer from '../reducers/product_reducer'
@@ -17,6 +22,10 @@ const initialState = {
     products_line: [],
 
     products_path: 'guitar',
+
+    single_product_loading: false,
+    single_product_error: false,
+    single_product: [],
 }
 
  
@@ -55,10 +64,23 @@ export const ProductsProvider = ({children}) => {
         dispatch({ type: PATH_UPDATE, payload: name})
     }
 
+    // GET SINGLE PRODUCT
+    const fetchSingleProduct = async (pp) => {
+            dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
+        try {
+            const response = await axios.get(pp)
+            const singleProduct = response.data 
+            dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct})
+        } catch (error) {
+            dispatch({type: GET_SINGLE_PRODUCT_ERROR})
+        }
+    }
+
     return (
         <ProductsContext.Provider value={{
             ...state,
-            pathUpdate
+            pathUpdate,
+            fetchSingleProduct
         }}>
             {children}
         </ProductsContext.Provider>

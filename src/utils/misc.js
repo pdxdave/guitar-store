@@ -17,4 +17,5 @@ export const navLinks = [
   ];
   
 
-  export const products_url = 'https://pdx-guitar-api.netlify.app/api/products'
+  export const products_url = 'https://pdx-guitar-api.netlify.app/api/products';
+  export const single_product_url = `https://pdx-guitar-api.netlify.app/api/single-product?id=`;

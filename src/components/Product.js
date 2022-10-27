@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helper';
 import Stars from './Stars'
+import {Link} from 'react-router-dom'
 
+// import { useProductsContext } from '../context/product_context';
 
-const Product = ({name, url, price, stars, reviews}) => {
+const Product = ({name, url, price, stars, reviews, id}) => {
+
+  // const {products_path} = useProductsContext()
+
+  
   let monthly = price / 6;
 
   return (
@@ -18,6 +24,10 @@ const Product = ({name, url, price, stars, reviews}) => {
         </div>
         
         <Stars stars={stars} reviews={reviews} />
+        <Link to={`${id}`}>
+          <button>blah</button>
+
+        </Link>
     </Wrapper>
   )
 }

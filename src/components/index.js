@@ -15,7 +15,8 @@ import Filters from './Filters';
 import Product from './Product';
 import Stars from './Stars';
 import Sort from './Sort';
-import ProductList from './ProductList'
+import ProductList from './ProductList';
+import ProcessImages from './ProcessImages';
 
 export {
     Navbar,
@@ -35,5 +36,6 @@ export {
     Product,
     Stars,
     Sort,
-    ProductList
+    ProductList,
+    ProcessImages
 }
