@@ -54,7 +54,7 @@ const SingleProductPage = () => {
               <p>Availability: {stock > 0 ? 'In stock' : 'out of stock'} </p>
               <Stars stars={stars} reviews={reviews}/>
 
-              {features.split(",").map((item, index) => {
+              {features.split(',').map((item, index) => {
                 return (
                   <ul>
                     <li key={index}>{item}</li>
