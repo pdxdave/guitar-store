@@ -41,6 +41,7 @@ const SingleProductPage = () => {
       images
     } = product
 
+  
 
   return (
     <Wrapper className="page-setting">
