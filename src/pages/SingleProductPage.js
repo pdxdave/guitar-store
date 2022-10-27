@@ -41,7 +41,6 @@ const SingleProductPage = () => {
       images
     } = product
 
-  let featuresList = features.split(",")
 
   return (
     <Wrapper className="page-setting">
@@ -54,7 +53,7 @@ const SingleProductPage = () => {
               <p>Availability: {stock > 0 ? 'In stock' : 'out of stock'} </p>
               <Stars stars={stars} reviews={reviews}/>
 
-              {featuresList.map((item, index) => {
+              {features.split(",").map((item, index) => {
                 return (
                   <ul>
                     <li key={index}>{item}</li>
