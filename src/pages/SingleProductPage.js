@@ -6,6 +6,7 @@ import { useProductsContext } from '../context/product_context';
 import { ProcessImages } from '../components';
 import { formatPrice } from '../utils/helper';
 import {Stars} from '../components'
+import { v4 as uuidv4 } from 'uuid'
 
 const SingleProductPage = () => {
     const {id} = useParams()
@@ -41,8 +42,6 @@ const SingleProductPage = () => {
       images
     } = product
 
-  
-
   return (
     <Wrapper className="page-setting">
       <div className="product-divider">
@@ -54,10 +53,10 @@ const SingleProductPage = () => {
               <p>Availability: {stock > 0 ? 'In stock' : 'out of stock'} </p>
               <Stars stars={stars} reviews={reviews}/>
 
-              {features.split(',').map((item, index) => {
+              {features && features.split(',').map((item, index) => {
                 return (
                   <ul>
-                    <li key={index}>{item}</li>
+                    <li key={uuidv4()}>{item}</li>
                   </ul>
                 )
               })}
