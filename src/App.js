@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {Home, Pedals, Amps, Guitars, SingleProduct} from './pages'
+import {Home, Pedals, Amps, Guitars, SingleProduct, Cart} from './pages'
 import {Navbar, MobileNav, MobileHelp, Footer } from './components'
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Route path="/amps/:id" element={<SingleProduct />} />
         <Route exact path="/pedals" element={< Pedals/>} />
         <Route path="/pedals/:id" element={<SingleProduct />} />  
+        <Route path="/cart" element={<Cart />}/>
       </Routes>
       <MobileHelp />
       <Footer />

@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import { useParams } from 'react-router-dom';
 import { single_product_url as url} from '../utils/misc';
 import { useProductsContext } from '../context/product_context';
-import { ProcessImages } from '../components';
+import { ProcessImages} from '../components';
 import { formatPrice } from '../utils/helper';
-import {Stars} from '../components'
-import { v4 as uuidv4 } from 'uuid'
+import {Stars, AddToCart} from '../components';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const SingleProductPage = () => {
     const {id} = useParams()
@@ -43,7 +44,7 @@ const SingleProductPage = () => {
     } = product
 
   return (
-    <Wrapper className="page-setting">
+    <Wrapper className="page-setting page-clear ">
       <div className="product-divider">
           <ProcessImages images={images} />
           <div className="product-specs">
@@ -51,15 +52,21 @@ const SingleProductPage = () => {
               <p>{description}</p>
               <p>Price: {formatPrice(price)}</p>
               <p>Availability: {stock > 0 ? 'In stock' : 'out of stock'} </p>
-              <Stars stars={stars} reviews={reviews}/>
+              <Stars stars={stars} reviews={reviews} blurb="user reviews"/>
 
-              {features && features.split(',').map((item, index) => {
+              {features && features.split(',').map((item) => {
                 return (
                   <ul>
                     <li key={uuidv4()}>{item}</li>
                   </ul>
                 )
               })}
+              <br />
+                <hr />
+             
+              <div style={{paddingBottom: '1em'}}></div>
+              {stock > 0 && <AddToCart product={product}  />}
+               
           </div>
       </div>
     </Wrapper>
@@ -67,6 +74,8 @@ const SingleProductPage = () => {
 }
 
 const Wrapper = styled.main`
+
+
 .product-divider {
   display: grid;
   gap: 4rem;

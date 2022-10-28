@@ -105,16 +105,7 @@ button {
         margin-bottom: 2rem;
     }
 
-    .links a {
-    /* display: block;
-    text-align: left;
-    font-size: 1.2rem;
-    color: gray;
-    text-transform: capitalize;
-    padding: 1rem 2.2rem; */
-  }
-
-    .mobile {
+    /* .mobile {
         position: fixed;
         top: 0;
         left: 0;
@@ -127,7 +118,7 @@ button {
     }
     .show-mobile {
         transform: translate(0);
-    }
+    } */
 
     .close-btn {
         background: transparent;

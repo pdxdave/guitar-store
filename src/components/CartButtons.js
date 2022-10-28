@@ -3,14 +3,23 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {BsFillPersonFill} from 'react-icons/bs';
 
+import { useCartContext } from "../context/cart_context";
+
+import { useMobileContext } from "../context/nav_context";
+
 const CartButtons = () => {
+  const {total_items} = useCartContext()
+  const {closeMobile} = useMobileContext()
+
+
+
     return (
-        <Wrapper className="cartBtns">
-          <Link className="cart-btn" style={{display: 'flex', flexDirection: 'column', marginBottom: '-4px'}}>
+        <Wrapper className="cartBtns" >
+          <Link to="/cart" className="cart-btn"  onClick={closeMobile} style={{display: 'flex', flexDirection: 'column', marginBottom: '-4px'}}>
             <span className="cart-wrapper">
               <BsTruck />
              
-              <span className="cart-value">15</span>
+              <span className="cart-value">{total_items}</span>
             </span>
              <span style={{fontSize: '.8rem', display: 'inline-block'}}>Cart</span>
           </Link>

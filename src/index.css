@@ -121,3 +121,19 @@ p {
 	background-size: cover;
 	background-repeat: no-repeat;
 } */
+
+
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  transform: translate(-100%);
+  transition: all .3s ease-in-out;
+  z-index: 999;
+}
+.show-mobile {
+  transform: translate(0);
+}

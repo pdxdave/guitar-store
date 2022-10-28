@@ -17,6 +17,12 @@ import Stars from './Stars';
 import Sort from './Sort';
 import ProductList from './ProductList';
 import ProcessImages from './ProcessImages';
+import AddToCart from './AddToCart';
+import AmountButtons from './AmountButtons';
+import CartHeader from './CartHeader';
+import CartStore from './CartStore';
+import CartProduct from './CartProduct'
+
 
 export {
     Navbar,
@@ -37,5 +43,10 @@ export {
     Stars,
     Sort,
     ProductList,
-    ProcessImages
+    ProcessImages,
+    AddToCart,
+    AmountButtons,
+    CartHeader,
+    CartStore,
+    CartProduct
 }
