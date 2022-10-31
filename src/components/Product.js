@@ -25,7 +25,7 @@ const Product = ({name, url, price, stars, reviews, id}) => {
         
         <Stars stars={stars} reviews={reviews} />
         <Link to={`${id}`}>
-          <button>blah</button>
+          <button>More Info</button>
 
         </Link>
     </Wrapper>
@@ -50,6 +50,20 @@ img{
     font-size: .875rem;
     text-align: center;
     margin-bottom: .25em;
+  }
+  button {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #449D67;
+    border: none;
+    color: #fff;
+    padding: .25em 0;
+    cursor: pointer;
+    transition: background .3s ease-in;
+  }
+  button:hover {
+    background: #8CCEA6;
   }
   .price {
     text-align: center;

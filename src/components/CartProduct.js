@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { formatPrice } from '../utils/helper'
 import AmountButtons from './AmountButtons'
-import { BsTrash } from 'react-icons/bs'
+import { FaTrash } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
 
 const CartItem = ({ id, image, name, price, amount }) => {
@@ -32,149 +32,100 @@ const CartItem = ({ id, image, name, price, amount }) => {
         className='remove-btn'
         onClick={() => removeProduct(id)}
       >
-        <BsTrash className="trashcan"/>
+        <FaTrash />
       </button>
     </Wrapper>
   )
 }
 
+
 const Wrapper = styled.article`
-.trashcan {
-  font-size: 2rem;
+
+.subtotal {
+    display: none;
 }
-  .subtotal {
+.price {
     display: none;
-  }
-  .price {
-    display: none;
-  }
-  display: grid;
-  grid-template-columns: 200px auto auto;
-  grid-template-rows: 75px;
-  gap: 3rem 1rem;
-  justify-items: center;
-  margin-bottom: 3rem;
-  align-items: center;
-  .title {
-    grid-template-rows: 75px;
-    display: grid;
-    grid-template-columns: 75px 125px;
-    align-items: center;
-    text-align: left;
-    gap: 1rem;
-  }
-  img {
+}
+
+
+display: grid;
+grid-template-columns: 200px auto auto;
+grid-template-rows: 75px;
+justify-items: center;
+align-items: center;
+margin-bottom: 3em;
+gap: 3em 1em;
+
+img {
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: var(--radius);
     object-fit: cover;
-  }
-  h5 {
-    font-size: 0.75rem;
-    margin-bottom: 0;
-  }
+}
+.name {
+    color: var(--clr-grey-600);
+}
+.title {
+    grid-template-rows: 75px;
+    display: grid;
+    grid-template-columns: 75px 125px;
+    gap: 1em;
+}
 
-  .color {
-    color: var(--clr-grey-5);
+
+h5 {
     font-size: 0.75rem;
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    span {
-      display: inline-block;
-      width: 0.5rem;
-      height: 0.5rem;
-      background: red;
-      margin-left: 0.5rem;
-      border-radius: var(--radius);
-    }
-  }
-  .price-small {
-    color: var(--clr-primary-5);
-  }
-  .amount-btns {
-    width: 75px;
-    button {
-      width: 1rem;
-      height: 0.5rem;
-      font-size: 0.75rem;
-    }
-    h2 {
-      font-size: 1rem;
-    }
-  }
-  .remove-btn {
-    color: var(--clr-white);
+    font-weight: 400;
+}
+
+button {
     background: transparent;
-    border: transparent;
-    letter-spacing: var(--spacing);
-    background: var(--clr-red-dark);
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius);
-    font-size: 0.75rem;
-    cursor: pointer;
-  }
-  @media (min-width: 776px) {
+    border: none;
+    font-size: 1rem;
+}
+
+@media (min-width: 776px){
+
+    button {
+        font-size: 1.3rem;
+    }
+
     .subtotal {
-      display: block;
-      margin-bottom: 0;
-      color: var(--clr-grey-5);
-      font-weight: 400;
-      font-size: 1rem;
+        display: block;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 1rem;
     }
     .price-small {
-      display: none;
+        display: none;
     }
     .price {
-      display: block;
-      font-size: 1rem;
-      color: var(--clr-primary-5);
-      font-weight: 400;
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
     }
     .name {
-      font-size: 0.85rem;
+        font-size: 0.85rem;
     }
-    .color {
-      font-size: 0.85rem;
-      span {
-        width: 0.75rem;
-        height: 0.75rem;
-      }
-    }
+
     grid-template-columns: 1fr 1fr 1fr 1fr auto;
     align-items: center;
     grid-template-rows: 75px;
     img {
-      height: 100%;
+        height: 100%;
     }
+
     .title {
-      height: 100%;
-      display: grid;
-      grid-template-columns: 100px 200px;
-      align-items: center;
-      gap: 1rem;
-      text-align: left;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100px 200px;
+        align-items: center;
+        gap: 1rem;
+       
     }
-    .amount-btns {
-      width: 100px;
-      button {
-        width: 1.5rem;
-        height: 1rem;
-        font-size: 1rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-  }
+}
 `
 
 export default CartItem

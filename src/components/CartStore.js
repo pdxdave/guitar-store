@@ -9,45 +9,34 @@ const CartContent = () => {
   const {cart, clearCart} = useCartContext()
 
   return (
-    <Wrapper className='section page-setting'>
+    <Wrapper className='page-setting page-clear'>
       <CartHeader />
       {cart.map((item) => {
         return <CartProduct key={item.id} {...item} />
       })}
-      <div className='link-container'>
-        
-        <button
-          type='button'
-          className='link-btn clear-btn'
-          onClick={clearCart}
-        >
-          clear shopping cart
+      
+      <div className='clear-cart'>
+          <button
+            type='button'
+            className='link-btn clear-btn'
+            onClick={clearCart}
+            >
+            clear shopping cart
         </button>
-      </div>
+        </div>
       <CartTotals />
     </Wrapper>
   )
 }
 const Wrapper = styled.section`
-  .link-container {
+
+  .clear-cart {
     display: flex;
-    justify-content: right;
-    margin-top: 2rem;
+    justify-content: flex-end;
   }
-  .link-btn {
-    background: transparent;
-    border-color: transparent;
-    text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  .clear-btn {
+  button {
     font-size: 1rem;
-    border: 1px solid var(--clr-grey-300);
-    padding: .5em;
-    background: var(--clr-grey-300);
-    border-radius: 4px;
+    padding: .25em;
   }
 `
 export default CartContent

@@ -30,13 +30,14 @@ const AddToCart = ({product}) => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper className='test'>
       <div className="btn-container">
         <AmountButtons 
           amount={amount}
           increase={increase}
           decrease={decrease}
         />
+        <div style={{height: '1em'}}></div>
         <Link to="/cart" className='btn-cart' onClick={() => addToCart(id, amount, product)}>
           add to cart
         </Link>
@@ -56,7 +57,6 @@ const Wrapper = styled.section`
   background-color: var(--clr-grey-400);
   color: #fff;
 }
-
 `
 
 export default AddToCart
