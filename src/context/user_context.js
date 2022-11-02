@@ -9,8 +9,7 @@ export const UserProvider = ({children}) => {
         isAuthenticated, 
         loginWithRedirect, 
         logout, 
-        user,
-        isLoading
+        user
     } = useAuth0()
 
 
