@@ -9,6 +9,7 @@ import ModalHelpDesktop from './ModalHelpDesktop';
 import {useState} from 'react';
 import { useMobileContext } from '../context/nav_context';
 import SubNav from './SubNav';
+import { useUserContext } from '../context/user_context';
 
 import { useProductsContext } from '../context/product_context';
 
@@ -17,6 +18,7 @@ import { useProductsContext } from '../context/product_context';
 const Navbar = () => {
     const [openModal, setOpenModal] = useState(false)
     const {openMobile} = useMobileContext()
+    const {productUser} = useUserContext()
 
     const {
       pathUpdate
@@ -55,6 +57,11 @@ const Navbar = () => {
                 </li>
               );
             })}
+            {
+              productUser && (<li>
+                <Link to="/checkout">checkout</Link>
+              </li>
+            )}
           </ul>
           {/* */}
             <div style={{display: "flex"}}>

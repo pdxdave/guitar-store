@@ -6,9 +6,11 @@ import styled from 'styled-components';
 import { useMobileContext } from '../context/nav_context';
 import CartButtons from './CartButtons';
 import { useProductsContext } from '../context/product_context';
+import { useUserContext } from '../context/user_context';
 
 const MobileNav = () => {
     const {isMobileOpen, closeMobile} = useMobileContext()
+    const {productUser} = useUserContext()
 
     const {
       pathUpdate
@@ -39,6 +41,11 @@ const MobileNav = () => {
                         </Link>
                     </li>
                 })}
+                {productUser && (
+                  <li className='checkout'>
+                    <Link to="/checkout" onClick={closeMobile}>Checkout</Link>
+                  </li>
+                )}
             </ul>
             <div className='test'>
                 <CartButtons />
@@ -105,21 +112,6 @@ button {
         margin-bottom: 2rem;
     }
 
-    /* .mobile {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: #fff;
-        transform: translate(-100%);
-        transition: all .3s ease-in-out;
-        z-index: 999;
-    }
-    .show-mobile {
-        transform: translate(0);
-    } */
-
     .close-btn {
         background: transparent;
         border: none;
@@ -127,6 +119,14 @@ button {
         cursor:pointer;
     }
 
+    .checkout {
+      font-size: 1.2rem;
+      padding: .25em 0 0 1em;
+      
+      a {
+        color: gray;
+      }
+    }
     @media screen and (min-width: 960px) {
     .mobile {
       display: none;

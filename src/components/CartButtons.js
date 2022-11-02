@@ -2,15 +2,14 @@ import { BsTruck } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {BsFillPersonFill} from 'react-icons/bs';
-
 import { useCartContext } from "../context/cart_context";
-
 import { useMobileContext } from "../context/nav_context";
+import { useUserContext } from "../context/user_context";
 
 const CartButtons = () => {
   const {total_items} = useCartContext()
   const {closeMobile} = useMobileContext()
-
+  const {loginWithRedirect, productUser, logout} = useUserContext()
 
 
     return (
@@ -23,10 +22,18 @@ const CartButtons = () => {
             </span>
              <span style={{fontSize: '.8rem', display: 'inline-block'}}>Cart</span>
           </Link>
-          <button type="button" className="auth-btn">
-            <BsFillPersonFill />
-            <span>Login</span>
-          </button>
+          { productUser 
+            ? <button type="button" className="auth-btn" onClick={() => logout({returnTo: window.location.origin})}>
+                  <BsFillPersonFill />
+                  <span>Logout</span>
+              </button>
+            : <button type="button" className="auth-btn" onClick={loginWithRedirect}>
+                <BsFillPersonFill />
+                <span>Login</span>
+              </button>
+          }
+          
+          
         </Wrapper>
       );
 }
