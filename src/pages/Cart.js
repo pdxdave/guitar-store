@@ -12,7 +12,9 @@ const Cart = () => {
             <Wrapper className='page-clear'>
                 <div className='empty-cart-msg'>
                     <h3>Hey, there's nothing here!</h3>
-                    <Link to="/">Home</Link>
+                    <Link to="/">
+                        <button className='btn'>You need to shop</button>
+                    </Link>
                 </div>
             </Wrapper>
         )
@@ -33,5 +35,19 @@ const Wrapper = styled.section`
     text-align: center;
     padding: 5em 0;
 }
+.btn {
+    width: 200px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #449D67;
+    border: none;
+    color: #fff;
+    padding: .25em 0;
+    cursor: pointer;
+    transition: background .3s ease-in;
+  }
+  .btn:hover {
+    background: #8CCEA6;
+  } */
 `
 export default Cart

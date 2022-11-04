@@ -21,7 +21,8 @@ import AddToCart from './AddToCart';
 import AmountButtons from './AmountButtons';
 import CartHeader from './CartHeader';
 import CartStore from './CartStore';
-import CartProduct from './CartProduct'
+import CartProduct from './CartProduct';
+import StripeCheckout from './StripeCheckout'
 
 
 export {
@@ -48,5 +49,6 @@ export {
     AmountButtons,
     CartHeader,
     CartStore,
-    CartProduct
+    CartProduct,
+    StripeCheckout
 }

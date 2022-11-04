@@ -6,7 +6,7 @@ const UserContext = React.createContext()
 export const UserProvider = ({children}) => {
 
     const {
-        isAuthenticated, 
+        // isAuthenticated, 
         loginWithRedirect, 
         logout, 
         user
@@ -16,12 +16,13 @@ export const UserProvider = ({children}) => {
     const [productUser, setProductUser] = useState(null)
 
     useEffect(() => {
-        if(isAuthenticated){
-            setProductUser(user)
-        } else {
-            setProductUser(false)
-        }
-    }, [isAuthenticated])
+        setProductUser(user)
+        // if(isAuthenticated){
+        //     setProductUser(user)
+        // } else {
+        //     setProductUser(false)
+        // }
+    }, [user])
 
 
     return (

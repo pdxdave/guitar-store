@@ -24,3 +24,5 @@ yarn-debug.log*
 yarn-error.log*
 
 Notes.md
+# Local Netlify folder
+.netlify

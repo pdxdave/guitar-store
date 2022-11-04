@@ -3,7 +3,7 @@ import { useUserContext } from "../context/user_context";
 
 const PrivateRoute = () => {
     const {productUser} = useUserContext()
-    console.log(productUser)
+    // console.log(productUser)
   return productUser ? <Outlet /> : <Navigate to="/" />
 }
 
