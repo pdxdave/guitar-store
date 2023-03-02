@@ -2,12 +2,12 @@
 
 I've had a long time interest playing guitar so I thought it would be fun to make an e-commerce site with an emphasis on guitars.  
 
-• Used Airtable, an on-line headless content management service, for the database
-• Connectivity to Airtable was facility by an API I created using NodeJs and Airtable client library
-• useReducer/useContext were chosen for state management to handle product, cart, and user activity
-• AuthO was employed for user sign-in required for purchasing products
-• Created filters allowing users to parse products by price and brand
-• Integrated Stripe, an on-line credit card service portal, for payment transactions
+• Used Airtable, an on-line headless content management service, for the database    
+• Connectivity to Airtable was facility by an API I created using NodeJs and Airtable client library    
+• useReducer/useContext were chosen for state management to handle product, cart, and user activity    
+• AuthO was employed for user sign-in required for purchasing products    
+• Created filters allowing users to parse products by price and brand    
+• Integrated Stripe, an on-line credit card service portal, for payment transactions    
 
 Link to site [11 Music](https://pdx-guitar.netlify.app/)
 
